@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+.swiper {
+    position: relative;
+    margin-top: 100px;
+    border-radius: 13px;
+    box-shadow: #e9adad 0px 0px 30px 2px
+}
+.artist-name {
+    color: #111;
+    font-size: 32px;
+    font-family: sans-serif;
+}
+a {
+    user-select: none;
+    text-decoration: none;
+    color: #111;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+.swiper-wrapper {
+    position: relative;
+    max-height: 800px;
+    max-width: 1600px;
+}
+.image {
+    max-width: 100%;
+    border-radius: 13px;
+    user-select: none;
+}
+.swiper-slide {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+.swiper-button-prev {
+    position: absolute;
+    display: flex;
+    width: 69px;
+    height: 115px;
+    top: 340px;
+    left: 10px;
+    z-index: 1000;
+}
+.swiper-button-next {
+    position: absolute;
+    display: flex;
+    width: 69px;
+    height: 115px;
+    top: 340px;
+    right: 10px;
+    z-index: 1000;
+}
+.swiper-button-next svg,
+.swiper-button-prev svg {
+  pointer-events: none;
+}
+.swiper-slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    margin: 0 auto;
+    width: 20%;
+    height: 2px;
+    background-color: #d3ade9;
+    transition: all 0.3s ease;
+}
+.swiper-slide:hover::after {
+    width: 100%;
+    box-shadow: #d3ade9 0px 0px 30px 2px;
+}
+.artist-name::selection {
+    color: #e9adad;
+}

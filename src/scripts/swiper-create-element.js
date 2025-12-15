@@ -22,7 +22,7 @@ function createLink(text, href) {
   return link
 }
 
-function createImage(src) {
+export function createImage(src) {
   const img = document.createElement('img')
   img.className = 'image'
   img.src = src

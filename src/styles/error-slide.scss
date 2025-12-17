@@ -1,0 +1,22 @@
+.error-slide {
+    padding-top: 20px;
+    padding-inline: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    justify-content: center;
+}
+.error-slide::after {
+    content: '';
+    background-color: #e9adad;
+}
+.error-slide:hover::after {
+    content: '';
+    background-color: #e9adad;
+    box-shadow: #e9adad 0px 0px 30px 2px;
+}
+.error-title {
+    text-transform: uppercase;
+    font-family: sans-serif;
+    color: #e9adad;
+}

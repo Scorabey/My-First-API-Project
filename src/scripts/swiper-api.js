@@ -1,20 +1,4 @@
-import chakingStatus from '../scripts/statusCode/status';
-import axios from 'axios';
-
-// export async function getQuote(url) {
-//     const response = await fetch(url, { cache: "no-store" })
-//     const data = await response.json()
-//     // chakingStatus({ status: data.status });
-
-//     if(!response.ok) {
-//         throw new Error(`API error: ${response.status}`)
-//     }
-
-//     if (!Array.isArray(data.results)) {
-//         throw new Error('Invalid API response')
-//     }
-//     return data.results
-// }
+import axios from "axios";
 
 export async function getQuote(url) {
     try {
@@ -22,13 +6,16 @@ export async function getQuote(url) {
         const data = response.data.results
 
         console.log("Succes! Data: ", data)
+        console.log("Request status: ", response.status)
 
         return data;
     }   catch(error) {
         if(error.response) {
             console.error('HTTP error: ', error.response.status)
+            return error.response.status
         } else if (error.request) {
             console.error('Network error: ', error.message)
+            return error.message
         } else (
             console.error('Error: ', error.message)
         )

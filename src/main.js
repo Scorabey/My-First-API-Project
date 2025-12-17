@@ -4,10 +4,9 @@ import 'swiper/css';
 import './styles/style.scss';
 import {getQuote} from './scripts/swiper-api';
 import {addSwiperSlider} from './scripts/swiper-create-element';
-import chakingStatus from './scripts/statusCode/status.js';
 
 export const api_url = 'https://nekos.best/api/v2/neko?amount=10'
-const results = await getQuote("https://nekos.best/api/v2/neko?amount=10")
+const results = await getQuote(api_url)
 
 const swiper = new Swiper('.swiper', {
   modules: [Navigation, Pagination],

@@ -1,6 +1,7 @@
-const wrapper = document.querySelector('.swiper-wrapper')
+export const wrapper = document.querySelector('.swiper-wrapper')
+import ImageError from '../../assets/image/ImageError.png'
 
-function createSwiperSlide() {
+export function createSwiperSlide() {
   const slide = document.createElement('div')
   slide.className = 'swiper-slide'
   wrapper.append(slide)
@@ -23,9 +24,13 @@ function createLink(text, href) {
 }
 
 export function createImage(src) {
-  const img = document.createElement('img')
+  const img = new Image();
   img.className = 'image'
   img.src = src
+  img.onerror = () => {
+    img.src = ImageError
+    console.error('Image load failed:', src);
+  }
   return img
 }
 

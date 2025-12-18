@@ -2,6 +2,8 @@ export const wrapper = document.querySelector('.swiper-wrapper')
 import ImageError from '../../assets/image/ImageError.png'
 import Noty from 'noty'
 
+// Create sliders
+
 export function createSwiperSlide() {
   const slide = document.createElement('div')
   slide.className = 'swiper-slide'
@@ -9,12 +11,16 @@ export function createSwiperSlide() {
   return slide
 }
 
+// Create artist name
+
 function createArtistName(name) {
   const div = document.createElement('div')
   div.className = 'artist-name'
   div.textContent = name
   return div
 }
+
+// Create artist profile and image platform link
 
 function createLink(text, href) {
   const link = document.createElement('a')
@@ -24,23 +30,31 @@ function createLink(text, href) {
   return link
 }
 
-export function createImage(src) {
+// Create image
+
+export function createImage(src, slide) {
   const img = new Image();
   img.className = 'image'
   img.src = src
   img.onerror = () => {
     img.onerror = null
+
     img.src = ImageError
+    slide.classList.add('swiper-slide-yellow')
+
     new Noty({
       text: `Image load failed, too many request`,
       type: 'alert',
       layout: 'topCenter',
       timeout: 1000
     }).show();
+
     console.error(`Image load failed ${src}`)
   }
   return img
 }
+
+// Export function for create elements
 
 export function addSwiperSlider(path_href, path_name, path_url, path_image_url) {
   const slide = createSwiperSlide()
@@ -49,6 +63,6 @@ export function addSwiperSlider(path_href, path_name, path_url, path_image_url) 
     createArtistName(path_name),
     createLink('Artist profile', path_href),
     createLink('Find image', path_url),
-    createImage(path_image_url)
+    createImage(path_image_url, slide)
   )
 }

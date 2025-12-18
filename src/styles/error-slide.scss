@@ -1,3 +1,5 @@
+@use './variables.scss' as *;
+
 .error-slide {
     padding-top: 20px;
     padding-inline: 40px;
@@ -8,15 +10,15 @@
 }
 .error-slide::after {
     content: '';
-    background-color: #791818;
+    background-color: $Red;
 }
 .error-slide:hover::after {
     content: '';
-    background-color: #791818;
-    box-shadow: #791818 0px 0px 30px 2px;
+    background-color: $Red;
+    box-shadow: $Red 0px 0px 30px 2px;
 }
 .error-title {
     text-transform: uppercase;
     font-family: sans-serif;
-    color: #791818;
+    color: $Red;
 }

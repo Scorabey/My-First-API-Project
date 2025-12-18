@@ -1,19 +1,16 @@
 @use './swiper.scss';
 @use './error-slide.scss';
+@use './noty-styles.scss';
+@use './variables.scss' as *;
 
 body {
     display: flex;
+    padding-top: 60px;
     justify-content: center;
+    flex-direction: column;
+    gap: 60px;
 }
-.noty_theme__mint.noty_type__warning {
-    background-color: #791818 !important;
-}
-.noty_theme__mint.noty_bar {
-    border-radius: 13px !important;
-}
-.noty_theme__mint.noty_type__success {
-    background-color: #237918 !important;
-}
-.noty_theme__mint.noty_type__alert, .noty_theme__mint.noty_type__notification {
-    background-color: #b9ab25 !important ;
+.title {
+    margin: 0 auto;
+    text-transform: uppercase;
 }

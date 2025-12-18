@@ -1,4 +1,6 @@
-import axios from "axios";
+import axios from 'axios';
+import Noty from 'noty';
+import '../../node_modules/noty/lib/noty.css';
 
 export async function getQuote(url) {
     try {
@@ -6,16 +8,23 @@ export async function getQuote(url) {
         const data = response.data.results
 
         console.log("Succes! Data: ", data)
-        console.log("Request status: ", response.status)
 
         return data;
     }   catch(error) {
         if(error.response) {
             console.error('HTTP error: ', error.response.status)
-            return error.response.status
+            new Noty({
+                text: `HTTP error: ${error.response.status}`,
+                type: 'warning',
+                layout: 'topCenter'
+            }).show();
         } else if (error.request) {
             console.error('Network error: ', error.message)
-            return error.message
+            new Noty({
+                text: `Network error: ${error.message}`,
+                type: 'warning',
+                layout: 'topCenter'
+            }).show();
         } else (
             console.error('Error: ', error.message)
         )

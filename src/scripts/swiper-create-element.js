@@ -7,7 +7,15 @@ import Noty from 'noty'
 export function createSwiperSlide() {
   const slide = document.createElement('div')
   slide.className = 'swiper-slide'
+  slide.setAttribute('data-swiper-autoplay', '1500')
+
   wrapper.append(slide)
+
+  const lazy = document.createElement('div')
+  lazy.className = "swiper-lazy-preloader"
+
+  slide.append(lazy)
+
   return slide
 }
 

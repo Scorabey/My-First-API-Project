@@ -33,6 +33,9 @@ The application fetches data from an external API, handles HTTP status codes, an
 
 ### Gif
 
+![First Gif](/assets/Project/First-Gif.gif)
+![Seccond Gif](/assets/Project/Seccond.gif)
+
 ## 📦 Installation & Run
 
 1. Clone the repository:

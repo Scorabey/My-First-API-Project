@@ -23,6 +23,8 @@ The application fetches data from an external API, handles HTTP status codes, an
 - Noty (npm)
 - Swiper (npm)
 
+## 🎬 Image and Gif library project
+
 ## 📦 Installation & Run
 
 1. Clone the repository:

@@ -1,6 +1,16 @@
 import axios from 'axios';
 import Noty from 'noty';
 import '../../node_modules/noty/lib/noty.css';
+import { Warning } from 'postcss';
+
+export function showNoty(text, type = 'warning') {
+    new Noty({
+        text: text,
+        type: type,
+        layout: 'topCenter',
+        timeout: 1000,
+    }).show();
+}
 
 // Get API
 
@@ -9,12 +19,7 @@ export async function getQuote(url) {
         const response = await axios.get(url);
         const data = response.data.results
 
-        new Noty({
-            text: `Loading: Succes!`,
-            type: 'success',
-            layout: 'topCenter',
-            timeout: 1000,
-        }).show();
+        showNoty(`Loading: Succes!`, "success")
 
         // Return API Data
 
@@ -22,25 +27,13 @@ export async function getQuote(url) {
     }   catch(error) {
         if(error.response) {
             console.error('HTTP error: ', error.response.status)
-            new Noty({
-                text: `HTTP error: ${error.response.status}`,
-                type: 'warning',
-                layout: 'topCenter'
-            }).show();
+            showNoty(`HTTP error: ${error.response.status}`)
         } else if (error.request) {
             console.error('Loading: ', error.message)
-            new Noty({
-                text: `Loading: ${error.message}`,
-                type: 'warning',
-                layout: 'topCenter'
-            }).show();
+            showNoty(`Loading: ${error.message}`)
         } else {
             console.error('ERROR: ', error.message)
-            new Noty({
-                text: `ERROR: ${error.message, error}`,
-                type: 'warning',
-                layout: 'topCenter'
-            }).show();
+            showNoty(`ERROR: ${error.message, error}`)
         }
     }
 }

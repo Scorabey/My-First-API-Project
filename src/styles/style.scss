@@ -1,7 +1,7 @@
-@use './swiper.scss';
-@use './error-slide.scss';
-@use './noty-styles.scss';
-@use './variables.scss' as *;
+@use '../styles/Errors/error-slide.scss';
+@use '../styles/Noty/noty-styles.scss';
+@use '../styles/Swiper/swiper.scss';
+@use '../styles/variables.scss' as *;
 
 body {
     display: flex;

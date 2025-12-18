@@ -1,9 +1,9 @@
 import Swiper from 'swiper';
 import { Autoplay, FreeMode, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
-import './styles/style.scss';
-import {getQuote} from './scripts/swiper-api';
-import {addSwiperSlider} from './scripts/swiper-create-element';
+import './styles/style.scss'
+import { getQuote } from './scripts/Api/swiper-api';
+import { addSwiperSlider } from './scripts/DOM/swiper-create-element';
 
 export const api_url = 'https://nekos.best/api/v2/neko?amount=10'
 const results = await getQuote(api_url)

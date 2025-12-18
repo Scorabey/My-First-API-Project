@@ -1,7 +1,6 @@
 export const wrapper = document.querySelector('.swiper-wrapper')
-import ImageError from '../../assets/image/ImageError.png'
-import Noty from 'noty'
-import { showNoty } from './swiper-api'
+import ImageError from '../../../assets/image/ImageError.png'
+import { showNoty } from '../Noty/noty'
 
 // Create sliders
 

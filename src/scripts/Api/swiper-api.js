@@ -1,16 +1,5 @@
 import axios from 'axios';
-import Noty from 'noty';
-import '../../node_modules/noty/lib/noty.css';
-import { Warning } from 'postcss';
-
-export function showNoty(text, type = 'warning') {
-    new Noty({
-        text: text,
-        type: type,
-        layout: 'topCenter',
-        timeout: 1000,
-    }).show();
-}
+import { showNoty } from '../Noty/noty';
 
 // Get API
 

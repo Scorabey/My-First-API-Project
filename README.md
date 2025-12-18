@@ -28,7 +28,6 @@ The application fetches data from an external API, handles HTTP status codes, an
 ### Image
 
 ### Gif
-[First Gif](https://github.com/Scorabey/My-First-API-Project/blob/main/assets/Project/Seccond.gif?raw=true)
 
 ## 📦 Installation & Run
 

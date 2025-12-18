@@ -25,6 +25,10 @@ The application fetches data from an external API, handles HTTP status codes, an
 
 ## 🎬 Image and Gif project library 
 
+### Image
+
+### Gif
+
 ## 📦 Installation & Run
 
 1. Clone the repository:

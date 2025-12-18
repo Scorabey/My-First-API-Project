@@ -27,6 +27,10 @@ The application fetches data from an external API, handles HTTP status codes, an
 
 ### Image
 
+[First Image](/assets/Project/First-Image.png)
+[Success](/assets/Project/Success.png)
+[ERROR](/assets/Project/ERROR.png)
+
 ### Gif
 
 ## 📦 Installation & Run

@@ -6,8 +6,14 @@ body {
     justify-content: center;
 }
 .noty_theme__mint.noty_type__warning {
-    background-color: #e9adad !important;
+    background-color: #791818 !important;
 }
 .noty_theme__mint.noty_bar {
     border-radius: 13px !important;
+}
+.noty_theme__mint.noty_type__success {
+    background-color: #237918 !important;
+}
+.noty_theme__mint.noty_type__alert, .noty_theme__mint.noty_type__notification {
+    background-color: #b9ab25 !important ;
 }

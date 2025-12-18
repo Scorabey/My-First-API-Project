@@ -1,5 +1,6 @@
 export const wrapper = document.querySelector('.swiper-wrapper')
 import ImageError from '../../assets/image/ImageError.png'
+import Noty from 'noty'
 
 export function createSwiperSlide() {
   const slide = document.createElement('div')
@@ -28,8 +29,15 @@ export function createImage(src) {
   img.className = 'image'
   img.src = src
   img.onerror = () => {
+    img.onerror = null
     img.src = ImageError
-    console.error('Image load failed:', src);
+    new Noty({
+      text: `Image load failed, too many request`,
+      type: 'alert',
+      layout: 'topCenter',
+      timeout: 1000
+    }).show();
+    console.error(`Image load failed ${src}`)
   }
   return img
 }

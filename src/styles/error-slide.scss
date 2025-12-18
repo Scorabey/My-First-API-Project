@@ -8,15 +8,15 @@
 }
 .error-slide::after {
     content: '';
-    background-color: #e9adad;
+    background-color: #791818;
 }
 .error-slide:hover::after {
     content: '';
-    background-color: #e9adad;
-    box-shadow: #e9adad 0px 0px 30px 2px;
+    background-color: #791818;
+    box-shadow: #791818 0px 0px 30px 2px;
 }
 .error-title {
     text-transform: uppercase;
     font-family: sans-serif;
-    color: #e9adad;
+    color: #791818;
 }

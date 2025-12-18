@@ -7,7 +7,12 @@ export async function getQuote(url) {
         const response = await axios.get(url);
         const data = response.data.results
 
-        console.log("Succes! Data: ", data)
+        new Noty({
+            text: `Loading: Succes!`,
+            type: 'success',
+            layout: 'topCenter',
+            timeout: 1000,
+        }).show();
 
         return data;
     }   catch(error) {
@@ -19,7 +24,7 @@ export async function getQuote(url) {
                 layout: 'topCenter'
             }).show();
         } else if (error.request) {
-            console.error('Network error: ', error.message)
+            console.error('Loading: ', error.message)
             new Noty({
                 text: `Network error: ${error.message}`,
                 type: 'warning',

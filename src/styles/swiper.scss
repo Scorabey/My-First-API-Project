@@ -2,7 +2,7 @@
     position: relative;
     margin-top: 100px;
     border-radius: 13px;
-    box-shadow: #e9adad 0px 0px 30px 2px
+    box-shadow: #791818 0px 0px 30px 2px
 }
 .artist-name {
     color: #111;
@@ -63,13 +63,13 @@ a {
     margin: 0 auto;
     width: 20%;
     height: 2px;
-    background-color: #d3ade9;
+    background-color: #691879;
     transition: all 0.3s ease;
 }
 .swiper-slide:hover::after {
     width: 100%;
-    box-shadow: #d3ade9 0px 0px 30px 2px;
+    box-shadow: #691879 0px 0px 30px 2px;
 }
 .artist-name::selection {
-    color: #e9adad;
+    color: #791818;
 }

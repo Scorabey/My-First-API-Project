@@ -5,7 +5,7 @@ The application fetches data from an external API, handles HTTP status codes, an
 
 ## 🚀 Features
 
-- Data fetching using Fetch API
+- Data fetching using Axios and Fetch API
 - HTTP status code handling (200, 404, 500, etc.)
 - Asynchronous JavaScript (`async / await`)
 - Dynamic DOM manipulation
@@ -20,6 +20,7 @@ The application fetches data from an external API, handles HTTP status codes, an
 - Axios API
 - Vite
 - HTML5 / SCSS3
+- Noty (npm)
 - Swiper (npm)
 
 ## 📦 Installation & Run

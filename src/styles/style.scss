@@ -2,6 +2,7 @@
 @use '../styles/Noty/noty-styles.scss';
 @use '../styles/Swiper/swiper.scss';
 @use '../styles/variables.scss' as *;
+@use './remove.scss';
 
 body {
     display: flex;
@@ -9,8 +10,17 @@ body {
     justify-content: center;
     flex-direction: column;
     gap: 60px;
+    background-color: var(--color-bg);
 }
 .title {
     margin: 0 auto;
     text-transform: uppercase;
+    color: var(--text-color);
+}
+
+button {
+    display: flex;
+    position: absolute;
+    top: 5%;
+    right: 5%;
 }

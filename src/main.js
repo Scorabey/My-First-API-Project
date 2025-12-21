@@ -4,6 +4,7 @@ import 'swiper/css';
 import './styles/style.scss'
 import { getQuote } from './scripts/Api/swiper-api';
 import { addSwiperSlider } from './scripts/DOM/swiper-create-element';
+import { themeSwitcher } from './scripts/Theme-swither/swith-theme';
 
 export const api_url = 'https://nekos.best/api/v2/neko?amount=10'
 const results = await getQuote(api_url)
@@ -41,3 +42,5 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+new themeSwitcher

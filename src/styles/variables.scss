@@ -1,10 +1,23 @@
+:root {
+    --color-bg: #ffffff;
+    --text-color: #000000;
+}
+
+html.is-dark-theme {
+    --color-bg: #0f0f0f;
+    --text-color: #ffffff;
+}
+
 $Yellow: #bea535;
 $Green: #8ebe35;
 $Red: #be3535;
 $Purple: #9e35be;
-$Black: #000000;
-$White: #fffffc;
+$Dark: #000000;
+$Light: #fffffc;
 
-$Border-Top: 2px solid $Black;
-$Border-Bottom: 2px solid $Black;
+$Border-Top: 2px solid var(--text-color);
+$Border-Bottom: 2px solid var(--text-color);
 $Border-Radius: 13px;
+
+$Text-Color: $Dark;
+$Color-Bg: $Light;
